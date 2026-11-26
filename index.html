@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebun Buah Ceria</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+<body>
+
+    <main class="landing">
+        <section class="landing-content">
+
+            <div class="brand">🌱 KEBUN BUAH CERIA</div>
+
+            <h1>
+                Ayo Belajar<br>
+                Menghitung <span>Buah!</span>
+            </h1>
+
+            <p class="description">
+                Selamat datang di kebun buah yang menyenangkan!
+                Yuk, belajar mengenal angka dan menghitung
+                berbagai macam buah sambil bermain.
+            </p>
+
+            <form id="name-form" class="name-form">
+                <label for="nama">👋 Siapa nama kamu?</label>
+
+                <input
+                    type="text"
+                    id="nama"
+                    placeholder="Tulis nama kamu di sini..."
+                    maxlength="30"
+                    required
+                >
+
+                <button type="submit">
+                    ▶ Mulai Bermain ⭐
+                </button>
+            </form>
+
+            <div class="footer-text">
+                🌈 Belajar sambil bermain, ceria setiap hari!
+            </div>
+
+        </section>
+
+        <section class="landing-illustration">
+            <div class="sun">☀️</div>
+
+            <div class="fruit-garden">
+                <div class="garden-title">🍓 Kebun Buahku 🍎</div>
+
+                <div class="big-fruits">
+                    <span>🍎</span>
+                    <span>🍊</span>
+                    <span>🍓</span>
+                    <span>🍇</span>
+                </div>
+
+                <div class="garden-ground">
+                    🌳 🪴 🌼 🌷 🌻 🪴 🌳
+                </div>
+            </div>
+
+            <div class="floating-fruit fruit-one">🍌</div>
+            <div class="floating-fruit fruit-two">🍉</div>
+            <div class="floating-fruit fruit-three">🍐</div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById("name-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const nama = document.getElementById("nama").value.trim();
+
+            if (!nama) {
+                alert("Silakan masukkan nama terlebih dahulu!");
+                return;
+            }
+
+            localStorage.setItem("namaPemain", nama);
+            window.location.href = "./dashboard.html";
+        });
+    </script>
+
+</body>
+</html>

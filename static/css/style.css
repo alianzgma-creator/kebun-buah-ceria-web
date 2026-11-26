@@ -1,0 +1,626 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Baloo 2', cursive;
+    background: linear-gradient(135deg, #fff9db, #e8f8df);
+    color: #36543a;
+    min-height: 100vh;
+}
+
+button, input {
+    font-family: inherit;
+}
+
+.landing {
+    min-height: 100vh;
+    max-width: 1250px;
+    margin: auto;
+    padding: 55px 7%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.landing-content {
+    max-width: 550px;
+}
+
+.brand {
+    color: #39844b;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.landing h1 {
+    font-size: clamp(42px, 5vw, 65px);
+    line-height: 1.12;
+    color: #365b3c;
+    margin-bottom: 20px;
+}
+
+.landing h1 span {
+    color: #f19a38;
+}
+
+.description {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #71836d;
+    margin-bottom: 28px;
+}
+
+.name-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.name-form label {
+    font-size: 17px;
+    font-weight: 700;
+    color: #426b43;
+}
+
+.name-form input {
+    width: 100%;
+    padding: 15px 18px;
+    border: 2px solid #d9e9cb;
+    border-radius: 15px;
+    outline: none;
+    font-size: 16px;
+    background: white;
+}
+
+.name-form input:focus {
+    border-color: #69b66d;
+}
+
+.name-form button {
+    padding: 15px;
+    background: #65b86b;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.name-form button:hover {
+    background: #4b9f55;
+    transform: translateY(-3px);
+}
+
+.footer-text {
+    margin-top: 28px;
+    color: #88a17b;
+    font-size: 14px;
+}
+
+.landing-illustration {
+    min-height: 430px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sun {
+    position: absolute;
+    top: 10px;
+    right: 45px;
+    font-size: 75px;
+}
+
+.fruit-garden {
+    width: 100%;
+    max-width: 430px;
+    background: #ffffff;
+    border-radius: 35px;
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0 15px 35px #7ca66b30;
+    border: 5px solid #e0f0d5;
+}
+
+.garden-title {
+    font-size: 25px;
+    color: #4d9253;
+    font-weight: 800;
+    margin-bottom: 35px;
+}
+
+.big-fruits {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 65px;
+    margin-bottom: 35px;
+}
+
+.garden-ground {
+    background: #dff3d6;
+    border-radius: 20px;
+    padding: 18px 5px;
+    font-size: 27px;
+}
+
+.floating-fruit {
+    position: absolute;
+    font-size: 55px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.fruit-one {
+    left: 0;
+    top: 70px;
+}
+
+.fruit-two {
+    right: 0;
+    bottom: 70px;
+    animation-delay: 0.5s;
+}
+
+.fruit-three {
+    left: 15px;
+    bottom: 30px;
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@media (max-width: 800px) {
+    .landing {
+        grid-template-columns: 1fr;
+        padding: 35px 7%;
+        gap: 25px;
+    }
+
+    .landing-content {
+        margin: auto;
+    }
+
+    .landing-illustration {
+        min-height: 350px;
+    }
+
+    .fruit-garden {
+        max-width: 380px;
+    }
+
+    .big-fruits {
+        font-size: 50px;
+    }
+
+    .sun {
+        right: 5px;
+    }
+}
+
+@media (max-width: 450px) {
+    .landing h1 {
+        font-size: 42px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .big-fruits {
+        font-size: 42px;
+        gap: 8px;
+    }
+
+    .floating-fruit {
+        font-size: 40px;
+    }
+}
+
+
+/* DASHBOARD */
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background: #ffffff;
+    box-shadow: 0 4px 15px #7ca66b18;
+}
+
+.dashboard-header .brand {
+    margin: 0;
+}
+
+.player {
+    background: #e8f6df;
+    color: #477b48;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+}
+
+.dashboard {
+    min-height: calc(100vh - 85px);
+    max-width: 1100px;
+    margin: auto;
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.dashboard h1 {
+    font-size: clamp(32px, 5vw, 45px);
+    color: #365b3c;
+    margin-bottom: 10px;
+}
+
+.dashboard .description {
+    max-width: 600px;
+    margin: 0 auto 35px;
+}
+
+.game-card {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 35px;
+    background: #ffffff;
+    border: 3px solid #e1efd8;
+    border-radius: 30px;
+    box-shadow: 0 12px 30px #7ca66b20;
+}
+
+.game-picture {
+    background: #eff9e9;
+    padding: 25px 10px;
+    border-radius: 20px;
+    font-size: 48px;
+    margin-bottom: 22px;
+}
+
+.level {
+    display: inline-block;
+    background: #fff2ce;
+    color: #b88624;
+    padding: 7px 18px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.game-card h2 {
+    font-size: 29px;
+    color: #426d45;
+    margin: 15px 0 8px;
+}
+
+.game-card p {
+    color: #788a73;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.play-button {
+    display: inline-block;
+    width: 100%;
+    padding: 14px;
+    background: #65b86b;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 800;
+    transition: 0.2s;
+}
+
+.play-button:hover {
+    background: #4b9f55;
+    transform: translateY(-3px);
+}
+
+.back-link {
+    margin-top: 30px;
+}
+
+.back-link a {
+    color: #71916c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-link a:hover {
+    color: #39844b;
+}
+
+@media (max-width: 600px) {
+    .dashboard-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .dashboard {
+        padding: 40px 6%;
+    }
+
+    .game-card {
+        padding: 25px 18px;
+    }
+
+    .game-picture {
+        font-size: 38px;
+    }
+}
+
+
+/* GAME PAGE */
+
+.game-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 35px 6%;
+}
+
+.game-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.back-button {
+    color: #56815a;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.score-box {
+    background: #fff1c8;
+    color: #b4811e;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 800;
+}
+
+.level-progress {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px #7ca66b15;
+    margin-bottom: 30px;
+}
+
+.level-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: #4d8150;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.progress-track {
+    width: 100%;
+    height: 13px;
+    background: #e9f1e4;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progress-fill {
+    width: 0%;
+    height: 100%;
+    background: #70bd72;
+    border-radius: 20px;
+    transition: width 0.3s;
+}
+
+#question-progress {
+    text-align: right;
+    color: #81917a;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.game-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.game-heading > span {
+    font-size: 50px;
+}
+
+.game-heading h1 {
+    color: #3f7545;
+    font-size: 38px;
+}
+
+.game-heading p {
+    color: #81917a;
+}
+
+.question-card,
+.result-card {
+    background: white;
+    border: 3px solid #e0efd8;
+    border-radius: 28px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px #7ca66b18;
+}
+
+.question-label {
+    color: #527b4d;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.fruit-area {
+    min-height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 25px 5px;
+    font-size: 43px;
+}
+
+.question-card h2 {
+    color: #50794f;
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+.answer-area {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.answer-button {
+    width: 75px;
+    height: 65px;
+    border: 3px solid #dcebd3;
+    border-radius: 17px;
+    background: #f3faee;
+    color: #47784a;
+    font-size: 25px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.answer-button:hover:not(:disabled) {
+    background: #dff2d8;
+    transform: translateY(-3px);
+}
+
+.answer-button:disabled {
+    cursor: default;
+    opacity: 0.8;
+}
+
+.feedback {
+    min-height: 45px;
+    margin-top: 20px;
+    color: #81917a;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.next-button,
+.home-button {
+    border: none;
+    border-radius: 14px;
+    padding: 13px 25px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    margin: 8px;
+    transition: 0.2s;
+}
+
+.next-button {
+    background: #65b86b;
+    color: white;
+}
+
+.home-button {
+    background: #fff0c9;
+    color: #a77b28;
+}
+
+.next-button:hover,
+.home-button:hover {
+    transform: translateY(-3px);
+}
+
+.skip-game {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.result-card {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.result-decoration {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.result-card h1 {
+    color: #4d8150;
+    font-size: 35px;
+}
+
+.result-card p {
+    color: #81917a;
+    margin: 12px 0;
+}
+
+.result-star {
+    font-size: 65px;
+    margin: 15px;
+}
+
+#final-score {
+    color: #d39a2f;
+    font-size: 27px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    .game-container {
+        padding: 25px 5%;
+    }
+
+    .game-top {
+        flex-wrap: wrap;
+    }
+
+    .question-card {
+        padding: 22px 14px;
+    }
+
+    .fruit-area {
+        font-size: 34px;
+    }
+
+    .answer-button {
+        width: 60px;
+        height: 58px;
+    }
+
+    .game-heading h1 {
+        font-size: 30px;
+    }
+
+    .question-label {
+        font-size: 17px;
+    }
+}

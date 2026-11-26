@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Kebun Buah Ceria</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+<body>
+
+    <header class="dashboard-header">
+        <div class="brand">🌱 KEBUN BUAH CERIA</div>
+        <div class="player" id="player-name">👧 Halo!</div>
+    </header>
+
+    <main class="dashboard">
+
+        <h1>Yuk, Pilih Permainan! 🍎</h1>
+
+        <p class="description">
+            Hari ini kita akan berpetualang di kebun buah!
+            Siap belajar sambil bermain?
+        </p>
+
+        <section class="game-card">
+
+            <div class="game-picture">
+                🍎 🍊 🍓 🍇 🍌
+            </div>
+
+            <span class="level">⭐ Level Ceria</span>
+
+            <h2>Menghitung Buah</h2>
+
+            <p>
+                Hitung jumlah buah yang muncul,
+                lalu pilih angka yang sesuai.
+                Ayo buktikan kemampuan berhitungmu!
+            </p>
+
+            <a href="./game.html" class="play-button">
+                Mulai Permainan ▶
+            </a>
+
+        </section>
+
+        <div class="back-link">
+            <a href="./index.html">← Kembali ke halaman utama</a>
+        </div>
+
+    </main>
+
+    <script>
+        const nama = localStorage.getItem("namaPemain");
+
+        if (!nama) {
+            window.location.href = "./index.html";
+        } else {
+            document.getElementById("player-name").textContent =
+                "👧 Halo, " + nama + "!";
+        }
+    </script>
+
+</body>
+</html>

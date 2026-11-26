@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Menghitung Buah - Kebun Buah Ceria</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+<body>
+
+    <header class="dashboard-header">
+        <div class="brand">🌱 KEBUN BUAH CERIA</div>
+        <div class="player" id="player-name">👧 Halo!</div>
+    </header>
+
+    <main class="game-container">
+
+        <div class="game-top">
+            <a href="./dashboard.html" class="back-button">
+                ← Kembali ke Dashboard
+            </a>
+
+            <div class="score-box">
+                ⭐ Skor: <span id="score">0</span>
+            </div>
+        </div>
+
+        <div class="level-progress">
+            <div class="level-info">
+                <span id="level-name">🌱 Kebun Pemula</span>
+                <span id="level-number">Level 1</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="progress-fill"></div>
+            </div>
+
+            <p id="question-progress">Soal 1 dari 5</p>
+        </div>
+
+        <section id="play-area">
+
+            <div class="game-heading">
+                <span>🌳</span>
+                <h1>Ayo Hitung Buah!</h1>
+                <p>Hitung semua buah yang ada di kebun!</p>
+            </div>
+
+            <div class="question-card">
+
+                <div class="question-label">
+                    🍎 Berapa jumlah buah yang kamu lihat?
+                </div>
+
+                <div id="fruit-area" class="fruit-area"></div>
+
+                <h2>Pilih angka yang benar!</h2>
+
+                <div id="answer-area" class="answer-area"></div>
+
+                <div id="feedback" class="feedback">
+                    Yuk, hitung buahnya dengan teliti! 🌼
+                </div>
+
+                <button id="next-button" class="next-button" hidden>
+                    Soal Berikutnya ➜
+                </button>
+
+            </div>
+
+        </section>
+
+        <section id="result-area" hidden>
+            <div class="result-card">
+
+                <div id="result-decoration" class="result-decoration">
+                    🏆🌈🎉
+                </div>
+
+                <h1 id="result-title">Hebat Sekali!</h1>
+
+                <p id="result-message">
+                    Kamu berhasil menyelesaikan tantangan!
+                </p>
+
+                <div id="result-star" class="result-star">⭐</div>
+
+                <h2 id="final-score">Skor: 0</h2>
+
+                <p id="reward-message"></p>
+
+                <button id="result-button" class="next-button">
+                    Lanjut Level ➜
+                </button>
+
+                <button onclick="goToDashboard()" class="home-button">
+                    Kembali ke Kebun 🏡
+                </button>
+
+            </div>
+        </section>
+
+        <div class="skip-game">
+            <button onclick="goToDashboard()" class="home-button">
+                Lewati Dulu, Kembali ke Kebun 🌻
+            </button>
+        </div>
+
+    </main>
+
+    <script src="./static/js/game.js"></script>
+
+</body>
+</html>
